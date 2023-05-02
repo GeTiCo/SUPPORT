@@ -1,0 +1,87 @@
+﻿<Window x:Class="BubblesTea.View.AdminLogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BubblesTea.View"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="AdminLogIn" Height="450" Width="800">
+    <!--Главный грид (Шапка / Тело / Подвал)-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <!--******************Грид шапка******************-->
+        <Grid Grid.Row="0">
+            <!--Логотип-->
+            <Image
+                Margin="20,0,0,0"
+                Source="/res/test.png"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"/>
+            <!--Имя организации-->
+            <TextBlock
+                FontSize="25"
+                Text="Авторизация"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+            <!--Кнопка выхода-->
+            <Button
+                Margin="0,0,20,0"
+                Width="100"
+                Height="50"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Click="BackOnMainWindow"/>
+        </Grid>
+        <!--******************Грид тело******************-->
+        <Grid Grid.Row="1">
+            <!--Панель активных элементов-->
+            <StackPanel Orientation="Vertical">
+                <!--Поле ввода логина-->
+                <TextBox
+                    Width="350"
+                    Height="50"
+                    Margin="0,40,0,0"/>
+                <!--Поле ввода пароля-->
+                <PasswordBox
+                    Width="350"
+                    Height="50"
+                    Margin="0,30,0,0"/>
+                <!--Кнопка авторизации-->
+                <Button
+                    Width="350"
+                    Height="50"
+                    Margin="0,30,0,0"
+                    Click="MoveOnAdminPanel"/>
+            </StackPanel>
+        </Grid>
+        <!--******************Грид подвал******************-->
+        <Grid Grid.Row="2">
+            <!--Текст копирайт-->
+            <TextBlock
+                Margin="20,0,0,0"
+                Text="Копирайт"
+                VerticalAlignment="Center"
+                FontSize="20"/>
+            <!--Кнопки соц-сетей-->
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Margin="0,0,20,0">
+                <Button
+                    Width="30"
+                    Height="30"
+                    Margin="10,0,0,0"/>
+                <Button
+                    Width="30"
+                    Height="30"
+                    Margin="10,0,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
